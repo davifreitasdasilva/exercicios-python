@@ -1,0 +1,70 @@
+#exercicio 1
+
+# 1. Opção de cadastro do nome do produto. 
+# 2. Opção de retirar produto do estoque (precisa ver se tem o produto) 
+# 3. Opção de adicionar produto no estoque (precisa adicionar 
+um numero maior que 0) 
+# 4. Opção de ver a quantidade no estoque
+
+def menu():
+    print("\n--- Sistema de Estoque ---")
+    print("1 - Cadastrar produto")
+    print("2 - Retirar estoque")
+    print("3 - Adicionar estoque")
+    print("4 - Ver a quantidade em estoque")
+    print(" - Sair")
+    return input("Escolha uma opçao: ")
+    
+    
+    # Variaveis de controle
+    produto = None
+    quantidade = 0
+    
+    while True:
+        opçao = menu()
+        
+        if opcao == "1":
+            produto = input("digite o nome do produto: ")
+            quantidade = 0
+            print(f"produto '{produto}' cadrastrado com sucesso!")
+            
+            elif opcao == "2":
+                if produto is none:
+                    print("Nenhum produto cadastrado ainda!")
+                else
+                    retirar = int(input("digite a quantidade a retirar: "))
+                    if retirar <=0:
+                        print("A quantidade deve ser maior que zero!")
+                    elif retirar > quantidade:
+                        print("quantidade insuficiente no estoque!")
+                    else:
+                        quantidade -= retirar
+                        print(f"Retirado {retirar} unidades(s). Estoque atual:{quantidade}")
+                        
+             elif opcao == "3":
+                 if produto is None:
+                     print("Nenhum produto cadastrado ainda!")
+                else:
+                    adicionar = int(input("Digite a quantidade a adicionar: "))
+                    if adicionar <= 0:
+                        print("A quantidade deve ser maior que zero!")
+                    else:
+                        quantidade += adicionar
+                        print(f"Adicionado {adicionar} unidade(s). Estoque atual: {quantidade}")
+                        
+            elif opcao =="4":
+                if produto is None:
+                    print("Nenhum produto cadastrado!")
+                else:
+                    print(f"produto: {produto} | Quantidade em estoque:{quantidades}")
+                    
+            elif opcao =="0":
+                print("saindo do sistema... até mais!")
+                break
+            
+            else:
+                print("opção invalida! tente novamente.")
+        
+    
+    
+    
